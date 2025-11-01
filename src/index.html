@@ -3,27 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Finder</title>
+    <title>Find Your Dream Vehicle</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Car Finder</h1>
+    <div class="hero">
+      <div class="overlay">
+        <div class="content">
+          <h1>Find Your Dream Vehicle</h1>
+          <p>
+            Have you been dreaming about getting a new vehicle?<br />
+            Well, you’re in luck.
+          </p>
 
-      <div class="dropdowns">
-        <select id="yearSelect">
-          <option value="">Select Year</option>
-        </select>
+          <div class="finder-box">
+            <div class="finder-section">
+              <h2>Year</h2>
+              <select id="yearSelect">
+                <option value="">Vehicle Year</option>
+              </select>
+            </div>
 
-        <select id="manufacturerSelect" disabled>
-          <option value="">Select Manufacturer</option>
-        </select>
+            <div class="divider"></div>
 
-        <select id="modelSelect" disabled>
-          <option value="">Select Model</option>
-        </select>
+            <div class="finder-section">
+              <h2>Make</h2>
+              <select id="manufacturerSelect" disabled>
+                <option value="">Vehicle Make</option>
+              </select>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="finder-section">
+              <h2>Model</h2>
+              <select id="modelSelect" disabled>
+                <option value="">Vehicle Model</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
