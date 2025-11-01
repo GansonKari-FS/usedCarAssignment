@@ -1,3 +1,28 @@
-html {
-  background: gray;
+body {
+  font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+select {
+  margin: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
 }

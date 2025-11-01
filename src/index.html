@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New ES6/SCSS Project</title>
-</head>
-<body>
-  <script src="bundle.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Finder</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Car Finder</h1>
+
+      <div class="dropdowns">
+        <select id="yearSelect">
+          <option value="">Select Year</option>
+        </select>
+
+        <select id="manufacturerSelect" disabled>
+          <option value="">Select Manufacturer</option>
+        </select>
+
+        <select id="modelSelect" disabled>
+          <option value="">Select Model</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
