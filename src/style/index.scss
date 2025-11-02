@@ -9,8 +9,6 @@ $shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 $radius: 12px;
 $transition: 0.3s ease;
 
-// MIXINS
-
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -31,14 +29,6 @@ body {
   color: $white;
   height: 100%;
 }
-
-h1,
-h2,
-p {
-  margin: 0;
-}
-
-// HERO SECTION
 
 .hero {
   background: url($background-img) no-repeat center center/cover;
@@ -68,7 +58,6 @@ p {
         margin-bottom: 45px;
       }
 
-      // Finder Box
       .finder-box {
         background-color: $box-bg;
         border-radius: $radius;

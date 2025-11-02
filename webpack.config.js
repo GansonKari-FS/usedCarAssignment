@@ -1,47 +1,52 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
+    clean: true,
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src')
+  mode: "development",
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "build"),
     },
-    extensions: ['.js', '.scss', '.css'],
+    compress: true,
+    port: 8080,
+    open: true,
   },
   module: {
     rules: [
       {
-        test: /\.js$/, // Test for .js files
-        exclude: /node_modules/, // Exclude node_modules
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // Use Babel to transpile ES6 to ES5
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'], // Babel preset for ES6+ features
+            presets: ["@babel/preset-env"],
           },
         },
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: "./src/index.html",
+      filename: "index.html",
     }),
   ],
-  devServer: {
-    compress: false,
-    port: 9000,
-    hot: true,
-    static: './build',
-    open: true
-  },
-  mode: 'development'
 };
